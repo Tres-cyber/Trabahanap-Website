@@ -4,6 +4,7 @@ import { Briefcase, Star, Heart, ThumbsUp, Sparkles, ArrowUpRight } from 'lucide
 import { Link } from 'react-router-dom'
 import StatsSection from './StatsSection'
 import PostStatsHero from './PostStatsHero'
+import Timeline from './Timeline'
 import Button from '../reusable/Button'
 import heroImage from '../assets/hero_sectio_image.svg'
 
@@ -146,6 +147,9 @@ const Home = () => {
 		</div>
 		<div className='pt-20'>
 			<PostStatsHero />
+		</div>
+		<div className='pt-20'>
+			<Timeline />
 		</div>
 	
 		</>
