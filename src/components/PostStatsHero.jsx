@@ -88,7 +88,7 @@ const PostStatsHero = () => {
 					transition={{ duration: 0.8, delay: 0.5 }}
 				>
 					<h2 className='text-4xl md:text-5xl font-bold text-gray-900 dark:text-white'>
-						Find and <span className='bg-yellow-300 px-1'>apply</span> to jobs across all <span className='bg-yellow-300 px-1'>industries</span>
+						Find and <span className='bg-yellow-300 px-1'>apply</span> to jobs across all <span className='bg-blue-300 px-1'>industries</span>
 					</h2>
 					<p className='text-gray-600 dark:text-gray-300 mt-4 font-lato text-lg md:text-xl'>
 						Discover curated opportunities that match your skills and goals. Filter roles, compare benefits, and apply with confidence.
