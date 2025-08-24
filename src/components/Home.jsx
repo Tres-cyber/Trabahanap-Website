@@ -7,6 +7,7 @@ import PostStatsHero from './PostStatsHero'
 import Timeline from './Timeline'
 import AppShowcase from './AppShowcase'
 import TestimonialCarousel from './TestimonialCarousel'
+import ParallaxHero from './ParallaxHero'
 import Button from '../reusable/Button'
 import heroImage from '../assets/hero_sectio_image.svg'
 
@@ -158,6 +159,9 @@ const Home = () => {
 		</div>
 		<div className='pt-20'>
 			<TestimonialCarousel />
+		</div>
+		<div className='-mx-4'>
+			<ParallaxHero />
 		</div>
 	
 		</>
