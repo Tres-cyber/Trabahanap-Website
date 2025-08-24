@@ -12,7 +12,7 @@ const App = () => {
     <BrowserRouter>
       <div className='min-h-screen flex flex-col bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100'>
         <Navbar />
-        <main className='flex-1 max-w-7xl mx-auto w-full p-4'>
+        <main className='flex-1 max-w-7xl mx-auto w-full p-4 pt-24'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />

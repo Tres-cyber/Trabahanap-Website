@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const ParallaxHero = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative min-h-screen w-full overflow-hidden pt-16">
       {/* Background Image - Static */}
       <div
         className="absolute inset-0 bg-cover bg-center"

@@ -7,6 +7,7 @@ const linkClass =
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false)
 	const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains('dark'))
+	const [isHamburgerHovered, setIsHamburgerHovered] = useState(false)
 
 	const closeMenu = () => setIsOpen(false)
 
@@ -29,7 +30,13 @@ const Navbar = () => {
 	}
 
 	return (
-		<nav className='w-full mb-6 relative bg-transparent'>
+		<nav className={`w-full fixed top-0 left-0 z-50 border-b border-gray-200 dark:border-gray-700 shadow-sm transition-colors duration-300 ${
+			isOpen
+				? 'bg-white dark:bg-gray-900' 
+				: isHamburgerHovered
+					? 'bg-white dark:bg-gray-900 backdrop-blur-sm'
+					: 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm'
+		}`}>
 			<div className='max-w-7xl mx-auto flex items-center justify-between px-6 py-4'>
 				{/* Left column: Logo + Title */}
 				<NavLink to='/' className='flex items-center gap-2 text-2xl md:text-3xl font-bold no-underline border-0' onClick={closeMenu}>
@@ -97,6 +104,8 @@ const Navbar = () => {
 					aria-label='Toggle menu'
 					aria-expanded={isOpen}
 					onClick={() => setIsOpen((v) => !v)}
+					onMouseEnter={() => setIsHamburgerHovered(true)}
+					onMouseLeave={() => setIsHamburgerHovered(false)}
 				>
 					{isOpen ? (
 						/* X icon */
