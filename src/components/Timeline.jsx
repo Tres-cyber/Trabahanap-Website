@@ -21,7 +21,8 @@ const TimelineItem = ({
   description, 
   imageSrc, 
   isLeft, 
-  index 
+  index,
+  iconColor 
 }) => {
   return (
     <motion.div
@@ -48,12 +49,12 @@ const TimelineItem = ({
         <div className={`absolute inset-0 flex items-center opacity-50 ${
           isLeft ? 'justify-end -mr-20' : 'justify-start -ml-20'
         }`}>
-          <Icon size={240} className="text-blue-200 dark:text-blue-800" />
+          <Icon size={240} className={iconColor} />
         </div>
         
         {/* Content */}
         <div className="relative z-10">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
+          <h3 className="text-3xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
             {title}
           </h3>
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4" style={{ fontFamily: 'Lato, sans-serif' }}>
@@ -86,39 +87,45 @@ const Timeline = () => {
   const timelineData = [
     {
       icon: UserPlus,
-      title: "Create your Jobseeker account",
+      title: "Create",
       description: "Sign up and create your professional profile to get started with Trabahanap. It only takes a few minutes to set up your account.",
-      imageSrc: null
+      imageSrc: null,
+      iconColor: "text-blue-200 dark:text-blue-800"
     },
     {
       icon: FileText,
-      title: "Build a standout profile",
+      title: "Build",
       description: "Showcase your skills, experience, and achievements. Add your portfolio, certifications, and professional summary to attract top employers.",
-      imageSrc: null
+      imageSrc: null,
+      iconColor: "text-green-200 dark:text-green-800"
     },
     {
       icon: Sparkles,
-      title: "Smart matching recommendations",
+      title: "Match",
       description: "Our AI-powered algorithm analyzes your profile and preferences to suggest the best job opportunities that match your skills and career goals.",
-      imageSrc: null
+      imageSrc: null,
+      iconColor: "text-purple-200 dark:text-purple-800"
     },
     {
       icon: Send,
-      title: "Apply & chat in real-time",
+      title: "Apply",
       description: "Submit applications with one click and communicate directly with employers through our integrated messaging system for faster responses.",
-      imageSrc: null
+      imageSrc: null,
+      iconColor: "text-orange-200 dark:text-orange-800"
     },
     {
       icon: CalendarCheck,
-      title: "Interview scheduled",
+      title: "Interview",
       description: "Once your application is reviewed, schedule interviews directly through the platform. Get reminders and preparation tips for your meetings.",
-      imageSrc: null
+      imageSrc: null,
+      iconColor: "text-pink-200 dark:text-pink-800"
     },
     {
       icon: BadgeCheck,
-      title: "Hired!",
+      title: "Hired",
       description: "Congratulations! You've successfully landed your dream job. Track your onboarding process and start your new career journey.",
-      imageSrc: null
+      imageSrc: null,
+      iconColor: "text-emerald-200 dark:text-emerald-800"
     }
   ]
 
@@ -182,6 +189,7 @@ const Timeline = () => {
                 imageSrc={item.imageSrc}
                 isLeft={index % 2 === 0}
                 index={index}
+                iconColor={item.iconColor}
               />
             ))}
           </div>

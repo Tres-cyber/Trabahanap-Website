@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import StatsSection from './StatsSection'
 import PostStatsHero from './PostStatsHero'
 import Timeline from './Timeline'
+import AppShowcase from './AppShowcase'
 import Button from '../reusable/Button'
 import heroImage from '../assets/hero_sectio_image.svg'
 
@@ -150,6 +151,9 @@ const Home = () => {
 		</div>
 		<div className='pt-20'>
 			<Timeline />
+		</div>
+		<div className='pt-20'>
+			<AppShowcase />
 		</div>
 	
 		</>
