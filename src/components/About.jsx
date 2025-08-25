@@ -1,11 +1,17 @@
 import React from 'react'
+import AboutHero from './about/AboutHero'
+import PodcastAboutUs from './about/PodcastAboutUs'
+import MeetOurTeam from './about/MeetOurTeam'
+import AboutContacts from './about/AboutContacts'
 
 const About = () => {
   return (
-    <section>
-      <h1 className='text-3xl font-bold mb-4'>About</h1>
-      <p>This is a simple React app demonstrating routing and reusable UI.</p>
-    </section>
+    <div>
+      <AboutHero />
+      <PodcastAboutUs />
+      <MeetOurTeam />
+      <AboutContacts />
+    </div>
   )
 }
 
