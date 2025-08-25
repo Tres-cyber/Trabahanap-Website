@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import logo from '../assets/ediskarte-logo.png'
 
 const linkClass =
 	'px-3 py-2 rounded-md no-underline font-medium transition-colors text-2xl md:text-xl'
@@ -40,7 +41,7 @@ const Navbar = () => {
 			<div className='max-w-7xl mx-auto flex items-center justify-between px-6 py-4'>
 				{/* Left column: Logo + Title */}
 				<NavLink to='/' className='flex items-center gap-2 text-2xl md:text-3xl font-bold no-underline border-0' onClick={closeMenu}>
-					<img src='./src/assets/ediskarte-logo.png' alt='Trabahanap logo' className='h-8 w-8' />
+					<img src={logo} alt='Trabahanap logo' className='h-8 w-8' />
 					<span>Trabahanap</span>
 				</NavLink>
 

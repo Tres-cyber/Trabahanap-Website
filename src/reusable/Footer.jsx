@@ -10,6 +10,8 @@ import {
   Phone, 
   Clock 
 } from 'lucide-react'
+import { NavLink } from 'react-router-dom'
+import logo from '../assets/ediskarte-logo.png'
 
 const Footer = () => {
   return (
@@ -22,9 +24,7 @@ const Footer = () => {
           <div className="space-y-4">
             {/* Logo and Brand */}
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                <Handshake className="w-6 h-6 text-white" />
-              </div>
+              <img src={logo} alt="Trabahanap logo" className="w-10 h-10 rounded-full" />
               <div>
                 <h3 className="font-semibold text-lg text-white">TrabaHanap</h3>
                 <p className="text-gray-400 text-sm">Connecting Job Seekers and Employers</p>
@@ -105,30 +105,30 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg text-white">Quicklinks</h3>
             <div className="space-y-2">
-              <a 
-                href="#" 
+              <NavLink 
+                to="/" 
                 className="block text-gray-400 text-sm hover:text-yellow-400 transition-colors duration-300"
               >
                 Home
-              </a>
-              <a 
-                href="/about" 
+              </NavLink>
+              <NavLink 
+                to="/about" 
                 className="block text-gray-400 text-sm hover:text-yellow-400 transition-colors duration-300"
               >
                 About
-              </a>
-              <a 
-                href="/jobs" 
+              </NavLink>
+              <NavLink 
+                to="/jobs" 
                 className="block text-gray-400 text-sm hover:text-yellow-400 transition-colors duration-300"
               >
                 Find Jobs
-              </a>
-              <a 
-                href="/contacts" 
+              </NavLink>
+              <NavLink 
+                to="/contacts" 
                 className="block text-gray-400 text-sm hover:text-yellow-400 transition-colors duration-300"
               >
                 Contacts
-              </a>
+              </NavLink>
             </div>
           </div>
 
