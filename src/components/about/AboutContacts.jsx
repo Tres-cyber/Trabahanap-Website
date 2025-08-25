@@ -12,7 +12,7 @@ const AboutContacts = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className='rounded-2xl p-8 md:p-10  bg-blue-700 text-white flex flex-col justify-between'
+          className='rounded-2xl p-8 md:p-10  bg-blue-500 text-white flex flex-col justify-between'
         >
           <div className='space-y-6'>
             <div>
