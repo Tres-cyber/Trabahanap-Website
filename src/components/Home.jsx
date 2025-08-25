@@ -58,7 +58,7 @@ const Home = () => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' }}
 				>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at dui nec tortor ultricies laoreet. Phasellus a lectus id nisl interdum dictum.
+					Find the right job that matches your skills, goals, and lifestyle. Trabahanap connects talent with opportunities that truly fit.
 				</motion.p>
 				<div className='flex items-center gap-4 pt-2'>
 					<motion.div 
