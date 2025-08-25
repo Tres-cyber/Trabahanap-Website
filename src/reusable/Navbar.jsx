@@ -31,16 +31,17 @@ const Navbar = () => {
 	}
 
 	return (
-		<nav className={`w-full fixed top-0 left-0 z-50 border-b border-gray-200 dark:border-gray-700 shadow-sm transition-colors duration-300 ${
+		<nav className={`w-full fixed top-0 left-0 z-50 border-b border-gray-200 dark:border-gray-800 shadow-sm transition-colors duration-300 ${
+			// Force solid background on mobile (iOS fix), transparent only on desktop
 			isOpen
-				? 'bg-white dark:bg-gray-900' 
+				? 'bg-white dark:bg-slate-900' 
 				: isHamburgerHovered
-					? 'bg-white dark:bg-gray-900 backdrop-blur-sm'
-					: 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm'
+					? 'bg-white dark:bg-slate-900 md:bg-white/95 md:dark:bg-slate-900/95 md:backdrop-blur-sm'
+					: 'bg-white dark:bg-slate-900 md:bg-white/95 md:dark:bg-slate-900/95 md:backdrop-blur-sm'
 		}`}>
 			<div className='max-w-7xl mx-auto flex items-center justify-between px-6 py-4'>
 				{/* Left column: Logo + Title */}
-				<NavLink to='/' className='flex items-center gap-2 text-2xl md:text-3xl font-bold no-underline border-0' onClick={closeMenu}>
+				<NavLink to='/' className='flex items-center gap-2 text-2xl md:text-3xl font-bold no-underline border-0 text-gray-900 dark:text-white' onClick={closeMenu}>
 					<img src={logo} alt='Trabahanap logo' className='h-8 w-8' />
 					<span>Trabahanap</span>
 				</NavLink>
@@ -49,39 +50,39 @@ const Navbar = () => {
 				<div className='hidden md:flex items-center gap-6 text-[18px] md:text-xl font-medium text-gray-800 dark:text-gray-200'>
 					<NavLink
 						to='/'
-						className={({ isActive }) => `no-underline border-0 hover:text-blue-500 transition ${isActive ? 'text-blue-700' : ''}`}
+						className={({ isActive }) => `no-underline border-0 hover:text-blue-600 dark:hover:text-blue-400 transition ${isActive ? 'text-blue-700 dark:text-blue-400' : ''}`}
 						end
 					>
 						Home
 					</NavLink>
 					<NavLink
 						to='/about'
-						className={({ isActive }) => `no-underline border-0 hover:text-blue-500 transition ${isActive ? 'text-blue-700' : ''}`}
+						className={({ isActive }) => `no-underline border-0 hover:text-blue-600 dark:hover:text-blue-400 transition ${isActive ? 'text-blue-700 dark:text-blue-400' : ''}`}
 					>
 						About
 					</NavLink>
 					<NavLink
 						to='/jobs'
-						className={({ isActive }) => `no-underline border-0 hover:text-blue-500 transition ${isActive ? 'text-blue-700' : ''}`}
+						className={({ isActive }) => `no-underline border-0 hover:text-blue-600 dark:hover:text-blue-400 transition ${isActive ? 'text-blue-700 dark:text-blue-400' : ''}`}
 					>
 						Jobs
 					</NavLink>
 					<NavLink
 						to='/contacts'
-						className={({ isActive }) => `no-underline border-0 hover:text-blue-500 transition ${isActive ? 'text-blue-700' : ''}`}
+						className={({ isActive }) => `no-underline border-0 hover:text-blue-600 dark:hover:text-blue-400 transition ${isActive ? 'text-blue-700 dark:text-blue-400' : ''}`}
 					>
 						Contact
 					</NavLink>
 					<div className='flex items-center gap-3'>
 						<NavLink
 							to='/jobs'
-							className='ml-1 inline-flex items-center rounded-full bg-black text-white px-5 py-2 md:px-7 md:py-3 no-underline border-0 hover:bg-gray-900 transition dark:bg-white dark:text-black dark:hover:bg-gray-200'
+							className='ml-1 inline-flex items-center rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-5 py-2 md:px-7 md:py-3 no-underline border-0 hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors'
 						>
 							Start Now
 						</NavLink>
 						<button
 							onClick={toggleTheme}
-							className='inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 transition'
+							className='inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors'
 							aria-label='Toggle dark mode'
 							title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
 						>
@@ -101,7 +102,7 @@ const Navbar = () => {
 
 				{/* Hamburger (mobile) */}
 				<button
-					className='md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:text-gray-200 dark:hover:bg-gray-800'
+					className='md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-slate-600 transition-colors'
 					aria-label='Toggle menu'
 					aria-expanded={isOpen}
 					onClick={() => setIsOpen((v) => !v)}
@@ -134,14 +135,14 @@ const Navbar = () => {
 				/>
 			)}
 			<div
-				className={`md:hidden fixed inset-y-0 right-0 z-50 w-[70vw] max-w-sm bg-white dark:bg-gray-900 shadow-xl transform transition-transform duration-300 ease-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+				className={`md:hidden fixed inset-y-0 right-0 z-50 w-[70vw] max-w-sm bg-white dark:bg-slate-900 shadow-xl transform transition-transform duration-300 ease-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
 				role='dialog'
 				aria-modal='true'
 			>
 				<div className='h-full flex flex-col px-4 py-6'>
 					<div className='mb-4 flex justify-end'>
 						<button
-							className='inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:text-gray-200 dark:hover:bg-gray-800'
+							className='inline-flex items-center justify-center rounded-md p-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-slate-600 transition-colors'
 							aria-label='Close menu'
 							onClick={closeMenu}
 						>
@@ -152,15 +153,15 @@ const Navbar = () => {
 						</button>
 					</div>
 					<div className='flex flex-col space-y-1'>
-						<NavLink to='/' className={`${linkClass} block w-full text-left dark:text-gray-200`} end onClick={closeMenu}>Home</NavLink>
-						<NavLink to='/about' className={`${linkClass} block w-full text-left dark:text-gray-200`} onClick={closeMenu}>About</NavLink>
-						<NavLink to='/jobs' className={`${linkClass} block w-full text-left dark:text-gray-200`} onClick={closeMenu}>Jobs</NavLink>
-						<NavLink to='/contacts' className={`${linkClass} block w-full text-left dark:text-gray-200`} onClick={closeMenu}>Contact</NavLink>
+						<NavLink to='/' className={`${linkClass} block w-full text-left text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400`} end onClick={closeMenu}>Home</NavLink>
+						<NavLink to='/about' className={`${linkClass} block w-full text-left text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400`} onClick={closeMenu}>About</NavLink>
+						<NavLink to='/jobs' className={`${linkClass} block w-full text-left text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400`} onClick={closeMenu}>Jobs</NavLink>
+						<NavLink to='/contacts' className={`${linkClass} block w-full text-left text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400`} onClick={closeMenu}>Contact</NavLink>
 					</div>
 					<div className='mt-auto grid grid-cols-2 gap-3'>
 						<button
 							onClick={toggleTheme}
-							className='inline-flex items-center justify-center rounded-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition'
+							className='inline-flex items-center justify-center rounded-full border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-700 dark:text-gray-200 px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors'
 							aria-label='Toggle dark mode'
 							title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
 						>
@@ -177,7 +178,7 @@ const Navbar = () => {
 						</button>
 						<NavLink
 							to='/jobs'
-							className='inline-flex w-full justify-center items-center rounded-full bg-black text-white px-4 py-2 text-sm font-medium hover:bg-gray-900 active:bg-black/90 focus:outline-none focus:ring-2 focus:ring-black/30 dark:bg-white dark:text-black dark:hover:bg-gray-200'
+							className='inline-flex w-full justify-center items-center rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 active:bg-gray-900/90 dark:active:bg-white/90 focus:outline-none focus:ring-2 focus:ring-gray-900/30 dark:focus:ring-white/30 transition-colors'
 							onClick={closeMenu}
 						>
 							Start Now
