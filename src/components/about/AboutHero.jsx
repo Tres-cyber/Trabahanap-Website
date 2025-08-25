@@ -35,7 +35,7 @@ const AboutHero = () => {
           {/* Breadcrumb Navigation */}
           <div className="flex items-center justify-center text-sm md:text-base text-gray-700">
             <a 
-              href="/" 
+              href="./" 
               className="text-blue-600 hover:underline transition-colors"
             >
               Home
