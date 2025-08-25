@@ -112,28 +112,22 @@ const Footer = () => {
                 Home
               </a>
               <a 
-                href="#" 
+                href="/about" 
                 className="block text-gray-400 text-sm hover:text-yellow-400 transition-colors duration-300"
               >
                 About
               </a>
               <a 
-                href="#" 
+                href="/jobs" 
                 className="block text-gray-400 text-sm hover:text-yellow-400 transition-colors duration-300"
               >
                 Find Jobs
               </a>
               <a 
-                href="#" 
+                href="/contacts" 
                 className="block text-gray-400 text-sm hover:text-yellow-400 transition-colors duration-300"
               >
-                Employers
-              </a>
-              <a 
-                href="#" 
-                className="block text-gray-400 text-sm hover:text-yellow-400 transition-colors duration-300"
-              >
-                Blog
+                Contacts
               </a>
             </div>
           </div>
