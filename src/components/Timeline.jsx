@@ -33,7 +33,7 @@ const TimelineItem = ({
       }`}
       initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ amount: 0.1 }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
     >
       {/* Connector line (desktop only) */}
@@ -134,7 +134,7 @@ const Timeline = () => {
       className="py-16 md:py-24"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ amount: 0.1 }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -143,7 +143,7 @@ const Timeline = () => {
           className="text-center mb-16 md:mb-20"
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ amount: 0.1 }}
           transition={{ duration: 0.4, ease: 'easeOut' }}
         >
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
@@ -160,7 +160,7 @@ const Timeline = () => {
           className="relative max-w-6xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
+          viewport={{ amount: 0.05 }}
           transition={{ duration: 0.4, ease: 'easeOut' }}
         >
           {/* Center line */}
@@ -168,7 +168,7 @@ const Timeline = () => {
             className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-600"
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ amount: 0.1 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           />
           

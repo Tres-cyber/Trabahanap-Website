@@ -37,7 +37,8 @@ const Home = () => {
 					className='text-4xl md:text-6xl font-extrabold leading-tight tracking-tight'
 					variants={textContainer}
 					initial='hidden'
-					animate='show'
+					whileInView='show'
+					viewport={{ amount: 0.3 }}
 				>
 					<motion.span className='block' variants={fadeUp}>We are the most</motion.span>
 					<motion.span className='block' variants={fadeUp}>
@@ -50,13 +51,19 @@ const Home = () => {
 				<motion.p
 					className='text-gray-600 text-base md:text-lg font-lato'
 					initial={{ opacity: 0, y: 8 }}
-					animate={{ opacity: 1, y: 0 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ amount: 0.3 }}
 					transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' }}
 				>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at dui nec tortor ultricies laoreet. Phasellus a lectus id nisl interdum dictum.
 				</motion.p>
 				<div className='flex items-center gap-4 pt-2'>
-					<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.6, ease: 'easeOut' }}>
+					<motion.div 
+						initial={{ opacity: 0 }} 
+						whileInView={{ opacity: 1 }} 
+						viewport={{ amount: 0.3 }}
+						transition={{ delay: 0.6, duration: 0.6, ease: 'easeOut' }}
+					>
 						<Link to='/jobs'>
 							<Button className='rounded-full px-8 py-4 text-lg font-lato'>
 								<Briefcase size={18} className='mr-2' />
@@ -64,7 +71,12 @@ const Home = () => {
 							</Button>
 						</Link>
 					</motion.div>
-					<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.75, duration: 0.6, ease: 'easeOut' }}>
+					<motion.div 
+						initial={{ opacity: 0 }} 
+						whileInView={{ opacity: 1 }} 
+						viewport={{ amount: 0.3 }}
+						transition={{ delay: 0.75, duration: 0.6, ease: 'easeOut' }}
+					>
 						<Link to='/about' className='inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 active:text-blue-800 font-lato'>
 							<span className='font-medium'>Learn more</span>
 							<ArrowUpRight size={20} />
@@ -79,7 +91,8 @@ const Home = () => {
 					className='w-full h-80 md:h-[28rem] transition duration-300 ease-out z-0'
 					loading='lazy'
 					initial={{ opacity: 0, x: 48 }}
-					animate={{ opacity: 1, x: 0 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					viewport={{ amount: 0.3 }}
 					transition={{ duration: 0.6, ease: 'easeOut' }}
 					whileHover={{ scale: 1.05 }}
 				/>
@@ -92,7 +105,8 @@ const Home = () => {
 					<motion.div
 						className='absolute top-6 right-6 md:top-8 md:right-10'
 						initial={{ y: 24, scale: 0.85 }}
-						animate={{ y: 0, scale: 1 }}
+						whileInView={{ y: 0, scale: 1 }}
+						viewport={{ amount: 0.3 }}
 						transition={{ type: 'spring', stiffness: 120, damping: 14, delay: 0.15 }}
 					>
 						<motion.div
@@ -108,7 +122,8 @@ const Home = () => {
 					<motion.div
 						className='absolute bottom-6 left-10 md:bottom-8 md:left-16'
 						initial={{ y: 24, scale: 0.85 }}
-						animate={{ y: 0, scale: 1 }}
+						whileInView={{ y: 0, scale: 1 }}
+						viewport={{ amount: 0.3 }}
 						transition={{ type: 'spring', stiffness: 120, damping: 14, delay: 0.25 }}
 					>
 						<motion.div
@@ -124,7 +139,8 @@ const Home = () => {
 					<motion.div
 						className='absolute bottom-5 right-4 md:bottom-7 md:right-8'
 						initial={{ y: 24, scale: 0.85 }}
-						animate={{ y: 0, scale: 1 }}
+						whileInView={{ y: 0, scale: 1 }}
+						viewport={{ amount: 0.3 }}
 						transition={{ type: 'spring', stiffness: 120, damping: 14, delay: 0.2 }}
 					>
 						<motion.div

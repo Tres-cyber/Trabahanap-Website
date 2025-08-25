@@ -74,7 +74,7 @@ const useInView = (options) => {
 }
 
 const StatsSection = ({ stats }) => {
-	const [sectionRef, inView] = useInView({ once: true, threshold: 0.2 })
+	const [sectionRef, inView] = useInView({ threshold: 0.2 })
 	return (
 		<section ref={sectionRef} className='py-12 bg-gray-100 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]'>
 			<div className='max-w-6xl mx-auto'>

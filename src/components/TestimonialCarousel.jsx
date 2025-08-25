@@ -93,7 +93,7 @@ const TestimonialCarousel = () => {
           className="flex flex-col md:flex-row md:items-center md:justify-between mb-12"
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ amount: 0.3 }}
           variants={fadeUp}
         >
           <div className="mb-6 md:mb-0">

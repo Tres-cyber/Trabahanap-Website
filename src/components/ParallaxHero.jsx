@@ -22,14 +22,14 @@ const ParallaxHero = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
+          viewport={{ amount: 0.3 }}
         >
           <motion.h1
             className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true }}
+            viewport={{ amount: 0.3 }}
           >
             Transform Your Career Journey
           </motion.h1>
@@ -39,7 +39,7 @@ const ParallaxHero = () => {
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-             viewport={{ once: true }}
+             viewport={{ amount: 0.3 }}
            >
              Discover opportunities that match your skills and aspirations. Join thousands of professionals who found their dream careers with us.
            </motion.p>
@@ -49,7 +49,7 @@ const ParallaxHero = () => {
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-             viewport={{ once: true }}
+             viewport={{ amount: 0.3 }}
              whileHover={{ scale: 1.05 }}
              whileTap={{ scale: 0.95 }}
            >

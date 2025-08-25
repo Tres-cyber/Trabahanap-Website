@@ -22,7 +22,7 @@ const AppShowcase = () => {
             className="relative flex justify-center lg:justify-start gap-6"
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={fadeUp}
           >
             {/* First smartphone mockup (back) */}
@@ -64,7 +64,7 @@ const AppShowcase = () => {
             className="text-center lg:text-left"
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={fadeUp}
             transition={{ delay: 0.2 }}
           >

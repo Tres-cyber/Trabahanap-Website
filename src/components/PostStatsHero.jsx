@@ -11,7 +11,7 @@ const IconCircle = ({ children, bgClass }) => (
 
 const PostStatsHero = () => {
 	const ref = useRef(null)
-	const isInView = useInView(ref, { once: true, margin: "-100px" })
+	const isInView = useInView(ref, { margin: "-100px" })
 
 	return (
 		<section ref={ref} className='bg-white dark:bg-gray-900 py-12 px-6 md:px-12'>
