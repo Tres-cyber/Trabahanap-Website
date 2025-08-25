@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { ChevronRight } from 'lucide-react'
 
-const AboutHero = () => {
+const ContactsHero = () => {
   return (
     <section 
       className="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center px-4 py-20 w-full"
@@ -28,7 +28,7 @@ const AboutHero = () => {
         >
           {/* Heading */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            About{' '}
+            Contact{' '}
             <span className="bg-yellow-300 text-black dark:text-white px-2 rounded">Us</span>
           </h1>
           
@@ -41,7 +41,7 @@ const AboutHero = () => {
               Home
             </a>
             <ChevronRight className="w-4 h-4 mx-2" />
-            <span>About</span>
+            <span>Contact</span>
           </div>
         </motion.div>
       </div>
@@ -49,4 +49,6 @@ const AboutHero = () => {
   )
 }
 
-export default AboutHero
+export default ContactsHero
+
+

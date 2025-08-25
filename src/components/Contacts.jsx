@@ -1,12 +1,12 @@
 import React from 'react'
+import ContactsHero from './contact/ContactsHero'
+import AboutContacts from './contact/AboutContacts'
 
 const Contacts = () => {
   return (
     <section>
-      <h1 className='text-3xl font-bold mb-4'>Contacts</h1>
-      <p>
-        Reach us at <a className='text-blue-600 underline' href='mailto:contact@example.com'>contact@example.com</a>
-      </p>
+      <ContactsHero />
+      <AboutContacts />
     </section>
   )
 }

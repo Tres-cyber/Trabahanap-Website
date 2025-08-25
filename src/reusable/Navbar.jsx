@@ -40,7 +40,7 @@ const Navbar = () => {
 			<div className='max-w-7xl mx-auto flex items-center justify-between px-6 py-4'>
 				{/* Left column: Logo + Title */}
 				<NavLink to='/' className='flex items-center gap-2 text-2xl md:text-3xl font-bold no-underline border-0' onClick={closeMenu}>
-					<img src='/vite.svg' alt='Trabahanap logo' className='h-8 w-8' />
+					<img src='./src/assets/ediskarte-logo.png' alt='Trabahanap logo' className='h-8 w-8' />
 					<span>Trabahanap</span>
 				</NavLink>
 
@@ -48,26 +48,26 @@ const Navbar = () => {
 				<div className='hidden md:flex items-center gap-6 text-[18px] md:text-xl font-medium text-gray-800 dark:text-gray-200'>
 					<NavLink
 						to='/'
-						className={({ isActive }) => `no-underline border-0 hover:text-purple-500 transition ${isActive ? 'text-purple-600' : ''}`}
+						className={({ isActive }) => `no-underline border-0 hover:text-blue-500 transition ${isActive ? 'text-blue-700' : ''}`}
 						end
 					>
 						Home
 					</NavLink>
 					<NavLink
 						to='/about'
-						className={({ isActive }) => `no-underline border-0 hover:text-purple-500 transition ${isActive ? 'text-purple-600' : ''}`}
+						className={({ isActive }) => `no-underline border-0 hover:text-blue-500 transition ${isActive ? 'text-blue-700' : ''}`}
 					>
 						About
 					</NavLink>
 					<NavLink
 						to='/jobs'
-						className={({ isActive }) => `no-underline border-0 hover:text-purple-500 transition ${isActive ? 'text-purple-600' : ''}`}
+						className={({ isActive }) => `no-underline border-0 hover:text-blue-500 transition ${isActive ? 'text-blue-700' : ''}`}
 					>
 						Jobs
 					</NavLink>
 					<NavLink
 						to='/contacts'
-						className={({ isActive }) => `no-underline border-0 hover:text-purple-500 transition ${isActive ? 'text-purple-600' : ''}`}
+						className={({ isActive }) => `no-underline border-0 hover:text-blue-500 transition ${isActive ? 'text-blue-700' : ''}`}
 					>
 						Contact
 					</NavLink>

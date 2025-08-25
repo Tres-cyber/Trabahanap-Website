@@ -11,6 +11,12 @@ html, body, #root {
   font-family: var(--font-primary);
 }
 
+/* Prevent horizontal overflow */
+html, body, #root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* Secondary font utility */
 .font-secondary,
 .font-lato {

@@ -85,7 +85,7 @@ const PodcastAboutUs = () => {
               <div>
                 <button 
                   onClick={() => toggleAccordion(0)}
-                  className="flex justify-between w-full font-semibold text-purple-600 dark:text-purple-400"
+                  className="flex justify-between w-full font-semibold dark:text-purple-400"
                 >
                   Our Vision
                   <span>{activeAccordion === 0 ? '−' : '+'}</span>
@@ -122,28 +122,6 @@ const PodcastAboutUs = () => {
                   </motion.p>
                 )}
               </div>
-            </div>
-
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <motion.button className="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-900 transition-colors dark:bg-white dark:text-black dark:hover:bg-gray-200"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={fadeUp}
-                transition={{ duration: 0.45 }}
-              >
-                Browse Jobs
-              </motion.button>
-              <motion.button className="flex items-center gap-2 text-black dark:text-white font-medium hover:underline"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={fadeUp}
-                transition={{ duration: 0.45, delay: 0.08 }}
-              >
-                Post a Job
-              </motion.button>
             </div>
           </motion.div>
         </div>

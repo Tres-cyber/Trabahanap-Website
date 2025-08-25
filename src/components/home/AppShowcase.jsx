@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Play, Apple } from 'lucide-react'
+import ediskarteLogo from '../../assets/ediskarte-logo.png'
 
 const AppShowcase = () => {
   const fadeUp = {
@@ -31,9 +32,9 @@ const AppShowcase = () => {
               variants={scaleUp}
             >
               {/* Screen */}
-              <div className="absolute inset-2 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                <div className="text-white text-center p-4">
-                  <div className="w-8 h-8 bg-white rounded-lg mx-auto mb-2"></div>
+              <div className="absolute inset-2 bg-white rounded-2xl flex items-center justify-center">
+                <div className="text-gray-900 text-center p-4">
+                  <img src={ediskarteLogo} alt="E-Diskarte" className="w-10 h-10 object-contain mx-auto mb-2" />
                   <div className="text-xs font-medium">Trabahanap</div>
                 </div>
               </div>
@@ -48,10 +49,10 @@ const AppShowcase = () => {
               transition={{ delay: 0.1 }}
             >
               {/* Screen */}
-              <div className="absolute inset-2 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center">
-                <div className="text-white text-center p-4">
-                  <div className="w-8 h-8 bg-white rounded-lg mx-auto mb-2"></div>
-                  <div className="text-xs font-medium">Jobs</div>
+              <div className="absolute inset-2 bg-white rounded-2xl flex items-center justify-center">
+                <div className="text-gray-900 text-center p-4">
+                  <img src={ediskarteLogo} alt="E-Diskarte" className="w-10 h-10 object-contain mx-auto mb-2" />
+                  <div className="text-xs font-medium">Find Jobs Easily</div>
                 </div>
               </div>
               {/* Home button */}
@@ -128,3 +129,5 @@ const AppShowcase = () => {
 }
 
 export default AppShowcase
+
+
